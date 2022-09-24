@@ -9,11 +9,11 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-color: #ffe4e4;
 }
 
 header {
   width: 100%;
-  background-color: #ffe4e4;
   padding: 1.2rem 0;
   margin: 0;
   height: 10%;
@@ -21,10 +21,9 @@ header {
 
 .wrapper,
 .result {
-  width: 100%;
+  width: 800px;
   margin: 0 auto;
-  height: 90%;
-  background-color: #ffe4e4;
+  height: 700px;
   position: relative;
 }
 
