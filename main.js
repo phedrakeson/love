@@ -1,5 +1,7 @@
-const runner = document.getElementById('runner');
 const wrapper = document.querySelector('.wrapper');
+const result = document.querySelector('.result');
+const runner = document.getElementById('runner');
+const fixed = document.getElementById('fixed');
 
 runner.addEventListener('mouseover', () => {
   const wrapperHeight = wrapper.offsetHeight;
@@ -26,4 +28,9 @@ runner.addEventListener('mouseover', () => {
 
   runner.style.top = offsetY + 150 * goY + 'px';
   runner.style.left = offsetX + 150 * goX + 'px';
+})
+
+fixed.addEventListener('click', () => {
+  wrapper.style.display = 'none';
+  result.style.display = 'flex';
 })

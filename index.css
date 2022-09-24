@@ -19,12 +19,19 @@ header {
   height: 10%;
 }
 
-.wrapper {
+.wrapper,
+.result {
   width: 100%;
   margin: 0 auto;
   height: 90%;
   background-color: #ffe4e4;
   position: relative;
+}
+
+.result {
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -61,4 +68,50 @@ h1 {
   height: 8rem;
   font-size: 2.8rem;
   transition: 0.1s;
+}
+
+.heart {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background: #f20044;
+  transform: rotate(-45deg);
+  box-shadow: -30px 30px 120px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+
+.heart:before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: -50%;
+  border-radius: 80px;
+  background: #f20044;
+  box-shadow: -30px -30px 120px #f20044;
+}
+
+.heart:after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: -50%;
+  background: #f20044;
+  border-radius: 80px;
+  box-shadow: 30px 30px 120px #f20044;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
 }
