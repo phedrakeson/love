@@ -2,6 +2,8 @@ const wrapper = document.querySelector('.wrapper');
 const result = document.querySelector('.result');
 const runner = document.getElementById('runner');
 const fixed = document.getElementById('fixed');
+const primaryTitle = document.querySelector('.primary-title');
+const secondaryTitle = document.querySelector('.secondary-title');
 const max_count = 10;
 let count = 0;
 
@@ -43,6 +45,8 @@ function showFixedButton() {
 function showResult() {
   wrapper.style.display = 'none';
   result.style.display = 'flex';
+  primaryTitle.style.display = 'none';
+  secondaryTitle.style.display = 'block';
 }
 
 runner.addEventListener('mouseover', avoidMouse);
