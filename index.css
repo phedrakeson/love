@@ -46,6 +46,7 @@ h1 {
 }
 
 #fixed {
+  display: none;
   top: 80%;
   left: 0%;
   width: 7rem;

@@ -2,8 +2,10 @@ const wrapper = document.querySelector('.wrapper');
 const result = document.querySelector('.result');
 const runner = document.getElementById('runner');
 const fixed = document.getElementById('fixed');
+const max_count = 10;
+let count = 0;
 
-runner.addEventListener('mouseover', () => {
+function avoidMouse() {
   const wrapperHeight = wrapper.offsetHeight;
   const wrapperWidth = wrapper.offsetWidth;
   let offsetX = runner.offsetLeft;
@@ -28,9 +30,21 @@ runner.addEventListener('mouseover', () => {
 
   runner.style.top = offsetY + 150 * goY + 'px';
   runner.style.left = offsetX + 150 * goX + 'px';
-})
 
-fixed.addEventListener('click', () => {
+  count += 1;
+  showFixedButton();
+}
+
+function showFixedButton() {
+  if (count < max_count) return;
+  fixed.style.display = 'inline-block';
+}
+
+function showResult() {
   wrapper.style.display = 'none';
   result.style.display = 'flex';
-})
+}
+
+runner.addEventListener('mouseover', avoidMouse);
+runner.addEventListener('click', avoidMouse);
+fixed.addEventListener('click', showResult);
