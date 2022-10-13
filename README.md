@@ -6,6 +6,6 @@ Ela não é simplismente um bilhete que você entrega e corre com medo da respos
 
 - [x] Totalmente a prova de **nãos**.
 - [ ] Ajuda na sua estética ~~não fazemos milagre~~.
-- [x] Contador de amor que sua paixonite tem por você.
+- [x] Conta o tamanho do amor da sua paixonite por você.
 - [ ] Leva para um encontro.
 - [x] O design bonitinho ajuda na resposta 😍.
