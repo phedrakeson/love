@@ -1,4 +1,5 @@
 import counting from './counter.js'
+import { modal, modalPos } from './modal.js'
 
 const reject = document.querySelector('.button--reject')
 const accept = document.querySelector('.button--accept')
@@ -33,8 +34,10 @@ const proximit = () => {
       }
     }, 650)
   })
-
 }
+
+accept.addEventListener('click', modalPos)
+
 
 proximit()
 
