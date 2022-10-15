@@ -38,7 +38,6 @@ const proximit = () => {
 
 accept.addEventListener('click', modalPos)
 
-
 proximit()
 
 counting(accept)

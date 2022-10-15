@@ -1,4 +1,4 @@
-export const modal = document.querySelector('#modal')
+export const modal = document.querySelector('dialog')
 
 const img = {
   el: modal.querySelector('img'),
@@ -24,14 +24,9 @@ const modalNegative = {
   text: text.negative
 }
 
-modal.querySelector('.button--accept').addEventListener('click', () => {
-  modal.close()
-  modal.classList.remove('is-inactive')
-})
-
 export function modalPos() {
   modal.showModal()
-  img.el.setAttribute('src', img.positive)
-  text.el.setAttribute('src', text.positive)
 
+  // img.el.setAttribute('src', img.positive)
+  // text.el.setAttribute('src', text.positive)
 }
