@@ -81,9 +81,7 @@ body {
   display: inline-block;
 }
 
-.is-inactive {
-  display: none;
-}
+
 
 .wrapper {
   background: var(--brand-50);
@@ -105,7 +103,7 @@ header img {
   margin-bottom: 40px;
 }
 
-dialog{
+.modal{
   align-items: center;
   background: #fff;
   border: none;
@@ -115,7 +113,7 @@ dialog{
   text-align: center;
 }
 
-dialog img{
+.modal img{
   display: block;
   margin-bottom: 24px;
 }
