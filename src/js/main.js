@@ -1,43 +1,30 @@
 import counting from './counter.js'
-import { modal, modalPos } from './modal.js'
+import { proximity } from './proximity.js'
+import { modal, modalNegative } from './modal.js'
 
 const reject = document.querySelector('.button--reject')
 const accept = document.querySelector('.button--accept')
 
-const proximit = () => {
-  // Passar como argumento o botão
 
-  const positions = {
-    top: reject.offsetTop,
-    left: reject.offsetLeft,
-    randomY() {
-      return Math.random() * this.top
-    },
-    randomX() {
-      return Math.random() * this.left
-    }
+// Abrir modal
+
+let count = 0
+accept.addEventListener('click', ()=>{
+  if(count == 4){
+    modal.showModal()
   }
+  count++
+})
 
-  const moveToRight = reject.addEventListener('mouseenter', () => {
-    let count = 0
+reject.addEventListener('mouseenter', ()=>{
+  if(count == 3){
+    modalNegative()
+  }
+  count++
+})
 
-    reject.style.transform += `translateX(${positions.randomX()}px)`
+// Verificar se o mouse está perto do botão não
+proximity(reject)
 
-    let moveToDown = setInterval(() => {
-      count += 1
-
-      reject.style.transform += `translateY(${positions.randomY()}px)`
-
-      if (count === 3) {
-        clearInterval(moveToDown)
-        reject.style.removeProperty('transform')
-      }
-    }, 650)
-  })
-}
-
-accept.addEventListener('click', modalPos)
-
-proximit()
-
+// Contagem de cliques
 counting(accept)
