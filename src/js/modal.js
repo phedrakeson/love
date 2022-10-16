@@ -1,32 +1,23 @@
 export const modal = document.querySelector('dialog')
 
 const img = {
-  el: modal.querySelector('img'),
-  positive: '../img/icon/after-10-yes.svg',
-  negative: '../img/icon/after-10-not-tentatives.svg'
+  // positive: '../src/img/icon/after-10-yes.svg',
+  negative: '../src/img/icon/after-10-not-tentatives.svg'
 }
 
 const text = {
-  el: modal.querySelector('p'),
-  positive:
-    'Te entrego meu coração para que dele cuides tão bem quanto cuidarei do seu.',
+  // positiveTitle: 'Seu sim mudou meu dia',
+  // positive:
+  //   'Te entrego meu coração para que dele cuides tão bem quanto cuidarei do seu.',
+    negativeTitlte: 'Oras, poxa :/',
   negative:
     '  Não se acanhe, nosso amor é azul como o mar azul, nada pode mudar isso I Love You S2'
 }
 
-const modalPositive = {
-  img: img.positive,
-  text: text.positive
-}
 
-const modalNegative = {
-  img: img.negative,
-  text: text.negative
-}
-
-export function modalPos() {
+export const modalNegative = () => {
+  modal.querySelector('img').setAttribute('src', img.negative)
+  modal.querySelector('h2').innerText = text.negativeTitlte;
+  modal.querySelector('p').innerText = text.negative
   modal.showModal()
-
-  // img.el.setAttribute('src', img.positive)
-  // text.el.setAttribute('src', text.positive)
 }
