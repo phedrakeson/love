@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/img/type=favicon.svg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Love or heat me</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sail&family=Salsa&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <title>Love 💑</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
-    <header>
-      <h1 class="primary-title">Quer namorar comigo? 💑💖</h1>
-      <h1 class="secondary-title">Ótima escolha 💑💖</h1>
-    </header>
-    <main class="wrapper">
-      <button id="runner">NÃO 😡🤬</button>
-      <button id="fixed">SIM 🥰🥳</button>
-    </main>
-    <section class="result">
-      <div class="heart"></div>
-      >
-    </section>
-    <script src="./main.js"></script>
+    <div class="wrapper">
+      <header>
+        <img src="./src/img/logo.svg" alt="Love-me baby" />
+        <div>
+          <h1>Quer ser meu amorzinho?</h1>
+          <p>Você tem mais de oito mil motivos pra dizer que sim</p>
+        </div>
+      </header>
+      <main>
+        <section>
+          <button class="button button--accept">
+            Sim, com certeza, óbvio
+            <span class="counter">1</span>
+          </button>
+          <button class="button button--reject">Não</button>
+        </section>
+      </main>
+    </div>
+    <dialog>
+      <div class="modal wrapper">
+        <img src="./src/img/icon/after-10-yes.svg" alt="happines" />
+        <h2>Seu sim mudou meu dia</h2>
+        <p>
+          Te entrego meu coração para que dele cuides tão bem quanto cuidarei do
+          seu.
+        </p>
+        <button href="./" class="button button--accept">Fechar</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>
